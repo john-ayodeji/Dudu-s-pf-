@@ -1,10 +1,10 @@
 import { z } from "zod";
 import { eq } from "drizzle-orm";
 import bcryptjs from "bcryptjs";
-import { createRouter, publicQuery } from "./middleware";
-import { getDb } from "./queries/connection";
-import * as schema from "@db/schema";
-import { signLocalToken, verifyLocalAuthToken } from "./local-auth-utils";
+import { createRouter, publicQuery } from "./middleware.js";
+import { getDb } from "./queries/connection.js";
+import * as schema from "../db/schema.js";
+import { signLocalToken, verifyLocalAuthToken } from "./local-auth-utils.js";
 import { TRPCError } from "@trpc/server";
 
 export const localAuthRouter = createRouter({

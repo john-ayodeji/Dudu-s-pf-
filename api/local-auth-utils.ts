@@ -1,9 +1,9 @@
 import * as jose from "jose";
 import { eq } from "drizzle-orm";
-import { env } from "./lib/env";
-import { getDb } from "./queries/connection";
-import * as schema from "@db/schema";
-import type { LocalUser } from "@db/schema";
+import { env } from "./lib/env.js";
+import { getDb } from "./queries/connection.js";
+import * as schema from "../db/schema.js";
+import type { LocalUser } from "../db/schema.js";
 
 const JWT_ALG = "HS256";
 const LOCAL_AUTH_SECRET = env.appSecret + "_local";

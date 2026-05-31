@@ -1,7 +1,7 @@
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
-import type { User, LocalUser } from "@db/schema";
-import { authenticateRequest } from "./kimi/auth";
-import { verifyLocalAuthToken } from "./local-auth-utils";
+import type { User, LocalUser } from "../db/schema.js";
+import { authenticateRequest } from "./kimi/auth.js";
+import { verifyLocalAuthToken } from "./local-auth-utils.js";
 
 export type UnifiedUser = {
   id: number;
